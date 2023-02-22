@@ -3,6 +3,20 @@ let wrapperDiv = document.getElementsByClassName("wrapper")[0];
 let nodeElement = document.createElement("div");
 nodeElement.className = "node";
 
+const modalElement = document.querySelector('.modal');
+const closeButton = document.querySelector('.modal-close-button');
+
+closeButton.addEventListener('click', () => {
+  modalElement.remove();
+});
+
+window.addEventListener('load', function() {
+  var gif = document.getElementById('pathfinder-gif');
+  var src = gif.src;
+  gif.src = '';
+  gif.src = src;
+});
+
 let clicktype = document.click.clicktype.value;
 let animationIntervall;
 let positionInList;
